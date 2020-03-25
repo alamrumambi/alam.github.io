@@ -23,6 +23,12 @@ body{
     width: 100%;
 }
 
+#hasilAkhir{
+    position: absolute;
+    padding: 15vw 0;
+    width: 100%;
+}
+
 .tombol{
     background: rgb(67, 142, 240);
     color: cornsilk;
@@ -44,6 +50,7 @@ body{
 
 .pilih{
     margin: 2em 0;
+    text-align: center;
 }
 
 #layer1{
@@ -79,6 +86,26 @@ body{
 #layer7{
     width: 100%;
     display: none;
+}
+
+#result{
+    width: 100%;
+    display: none;
+}
+
+#wrongResult{
+    width: 100%;
+    display: none;
+}
+
+#finish{
+    width: 100%;
+    display: none;
+}
+
+#finish img{
+    width: 50vw;
+    position: static;
 }
 
 .imglayer{

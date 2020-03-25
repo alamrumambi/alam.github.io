@@ -10,8 +10,8 @@
 <body>
   <!-- HALAMAN AWAL -->
   <div id="opening">
-    <center><h1>READ THE NUMBER</h1></center>  
-    <center><h1>IN YOUR MIND</h1></center>
+    <center><h1>MENEBAK ANGKA</h1></center>  
+    <center><h1>DI FIKIRAN ANDA</h1></center>
     <center>
       <div id="startButton">
         <input onclick="scr('next')" type="submit" value="START" class="tombol">
@@ -39,7 +39,7 @@
     <center><img src="image/layer1.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -55,7 +55,7 @@
     <center><img src="image/layer2.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -71,7 +71,7 @@
     <center><img src="image/layer3.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -87,7 +87,7 @@
     <center><img src="image/layer4.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -103,7 +103,7 @@
     <center><img src="image/layer5.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -119,7 +119,7 @@
     <center><img src="image/layer6.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -135,7 +135,7 @@
     <center><img src="image/layer7.png" class="imglayer"></center>
     <center>
       <div class="pilihanLayer">
-        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerY')" type="submit" value="ADA" class="tombolYa" >
         <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
       </div>
       <div class="pilihNav">
@@ -143,6 +143,40 @@
         <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
       </div>
     </center>
+  </div>
+  <!-- RESULT IS -->
+  <div id="result">
+    <center><h1>ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>SUDAH TERTERBAK</h1></center>
+    <center>
+      <div id="startButton">
+        <input onclick="scr('next')" type="submit" value="NEXT" class="tombol">
+      </div>
+    </center>
+  </div>
+  <!-- WRONG RESULT -->
+  <div id="wrongResult">
+    <center><h1>ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>BUKAN ANGKA ANTARA 1 - 100</h1></center>
+    <center>
+      <div id="startButton">
+        <input onclick="scr('home')" type="submit" value="HOME" class="tombol">
+      </div>
+    </center>
+  </div>
+  <!-- FINISH -->
+  <div id="finish">
+    <center><h1>ANGKA YANG ANDA FIKIRKAN</h1></center>  
+    <center><h1>ADALAH</h1></center>
+    <center>
+      <div id="hasilAkhir">
+        <h1 id="ending" style="color: dodgerblue; font-size: 15vw; margin-top: 0 ;"><strong>ANGKA</strong></h1>
+      </div>
+    </center>
+    <center><img src="image/start background.png"></center>
+    <div class="pilih">
+      <input onclick="scr('home')" type="submit" value="HOME" class="tombol"> 
+    </div>
   </div>
 </body>
 </html>
