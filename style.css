@@ -1,0 +1,161 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    background-color: #dedede;
+}
+
+#opening{
+    padding: 0em;
+    margin: 2em auto;
+    width: 100%;
+    min-height: 200px;
+    display: block;
+}
+
+#opening img{
+    width: 50vw;
+    position: static;
+}
+
+#startButton{
+    position: absolute;
+    padding: 19vw 0;
+    width: 100%;
+}
+
+.tombol{
+    background: rgb(67, 142, 240);
+    color: cornsilk;
+    border: 0;
+    padding: 1vw 4vw;
+    font-size: 4vw;
+}
+
+.tombol:hover{
+    cursor: pointer;
+    background: rgb(0, 92, 197);
+    transition: 0.5s;
+}
+
+#pilih-angka{
+    display: none;
+    width: 100%;
+}
+
+.pilih{
+    margin: 2em 0;
+}
+
+#layer1{
+    width: 100%;
+    display: none;
+}
+
+#layer2{
+    width: 100%;
+    display: none;
+}
+
+#layer3{
+    width: 100%;
+    display: none;
+}
+
+#layer4{
+    width: 100%;
+    display: none;
+}
+
+#layer5{
+    width: 100%;
+    display: none;
+}
+
+#layer6{
+    width: 100%;
+    display: none;
+}
+
+#layer7{
+    width: 100%;
+    display: none;
+}
+
+.imglayer{
+    width: 50vw;
+    position: static;
+}
+
+.pilihanLayer{
+    width: 50vw;
+    margin-top: 3vw;
+}
+
+.tombolYa{
+    background: rgb(67, 142, 240);
+    color: cornsilk;
+    border: 0;
+    padding: 1vw 4vw;
+    position: relative;
+    margin-right: 5vw;
+    font-size: 4vw;
+}
+
+.tombolYa:hover{
+    cursor: pointer;
+    background: rgb(0, 92, 197);
+    transition: 0.5s;
+}
+
+.tombolNo{
+    background: rgb(67, 142, 240);
+    color: cornsilk;
+    border: 0;
+    padding: 1vw 4vw;
+    position: relative;
+    margin-left: 5vw;
+    font-size: 4vw;
+}
+
+.tombolNo:hover{
+    cursor: pointer;
+    background: rgb(0, 92, 197);
+    transition: 0.5s;
+}
+
+.pilihNav{
+    width: 90vw;
+    margin-top: 3vw;
+}
+
+.navBack{
+    background: rgb(135, 226, 162);
+    color: rgb(0, 0, 0);
+    border: 0;
+    padding: 1vw 4vw;
+    font-size: 2vw; 
+    margin-right: 34%;
+}
+
+.navBack:hover{
+    cursor: pointer;
+    background: rgb(31, 199, 87);
+    color: white;
+    transition: 0.5s;
+}
+
+.navHome{
+    background: rgb(135, 226, 162);
+    color: rgb(0, 0, 0);
+    border: 0;
+    padding: 1vw 4vw;
+    font-size: 2vw; 
+    margin-left: 34%;
+}
+
+.navHome:hover{
+    cursor: pointer;
+    background: rgb(31, 199, 87);
+    color: white;
+    transition: 0.5s;
+}

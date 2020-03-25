@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read The Number</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- HALAMAN AWAL -->
+  <div id="opening">
+    <center><h1>READ THE NUMBER</h1></center>  
+    <center><h1>IN YOUR MIND</h1></center>
+    <center>
+      <div id="startButton">
+        <input onclick="scr('next')" type="submit" value="START" class="tombol">
+      </div>
+    </center>
+    <center><img src="image/start background.png"></center>
+  </div>
+  <!-- HALAMAN WELCOME -->
+  <div id="pilih-angka">
+    <center><h1>PIKIRKAN SALAH 1 ANGKA</h1></center>
+    <center><h1>ANTARA 1 - 100</h1></center>
+    <center>
+      <div class="pilih">
+        <input onclick="scr('next')" type="submit" value="NEXT" class="tombol"> 
+      </div>
+      <div class="pilih">
+        <input onclick="scr('home')" type="submit" value="HOME" class="tombol"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 1 PILIHAN ANGKA -->
+  <div id="layer1">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer1.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 2 PILIHAN ANGKA -->
+  <div id="layer2">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer2.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 3 PILIHAN ANGKA -->
+  <div id="layer3">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer3.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 4 PILIHAN ANGKA -->
+  <div id="layer4">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer4.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 5 PILIHAN ANGKA -->
+  <div id="layer5">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer5.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 6 PILIHAN ANGKA -->
+  <div id="layer6">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer6.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+  <!-- LAYER 7 PILIHAN ANGKA -->
+  <div id="layer7">
+    <center><h1>APAKAH ANGKA YANG ANDA FIKIRKAN</h1></center>
+    <center><h1>ADA DIANTARA ANGKA-ANGKA DIBAWAH INI?</h1></center>
+    <center><img src="image/layer7.png" class="imglayer"></center>
+    <center>
+      <div class="pilihanLayer">
+        <input onclick="scr('layerY')" type="submit" value="IYA" class="tombolYa" >
+        <input onclick="scr('layerT')" type="submit" value="TIDAK" class="tombolNo">  
+      </div>
+      <div class="pilihNav">
+        <input onclick="scr('back')" type="submit" value="Back" class="navBack"> 
+        <input onclick="scr('home')" type="submit" value="HOME" class="navHome"> 
+      </div>
+    </center>
+  </div>
+</body>
+</html>
