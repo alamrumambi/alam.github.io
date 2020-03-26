@@ -148,9 +148,9 @@ body{
 }
 
 .pilihNav{
-    width: 90vw;
-    margin-top: 3vw;
+    width: 95vw;
     text-align: right;
+    position: absolute;
 }
 
 .navHome{
