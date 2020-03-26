@@ -1,5 +1,5 @@
 var result = 0;
-var temp = [];
+// var temp = [];
 function scr(input){
     var hom = document.getElementById("opening");
     var welcome = document.getElementById("pilih-angka");
@@ -20,11 +20,11 @@ function scr(input){
             welcome.style.display = "none";
             layer1.style.display = "block";
         }
-        else if (result1.style.display == "block"){
-            result1.style.display = "none";
-            hasil.innerHTML = result;
-            finish.style.display = "block";
-        }
+        // else if (result1.style.display == "block"){
+        //     result1.style.display = "none";
+        //     hasil.innerHTML = result;
+        //     finish.style.display = "block";
+        // }
         else {
             welcome.style.display = "block";
             hom.style.display = "none"
@@ -32,7 +32,7 @@ function scr(input){
     }
 
     else if (input == 'home'){
-        var arr = [welcome, layer1, layer2, layer3, layer4,
+        let arr = [welcome, layer1, layer2, layer3, layer4,
             layer5, layer6, layer7, wrongResult, finish]
         
         for (let i in arr){
@@ -45,41 +45,41 @@ function scr(input){
         } 
     }
 
-    else if (input == 'back'){
-        var arr = [[layer1, 1], [layer2, 2], [layer3, 4], [layer4, 8],
-        [layer5, 16], [layer6, 32], [layer7, 64]];
+    // else if (input == 'back'){
+    //     var arr = [[layer1, 1], [layer2, 2], [layer3, 4], [layer4, 8],
+    //     [layer5, 16], [layer6, 32], [layer7, 64]];
         
-        for (let i in arr){
-            if (arr[i][0].style.display == "block"){
-                arr[i][0].style.display = "none";
-                if (i == "0") {
-                    welcome.style.display = "block";
-                    break;
-                }
-                else {
-                    arr[Number(i) - 1][0].style.display = "block";
-                    for (let j in temp){
-                        if (temp[j] == Number(i) - 1){
-                            result -= arr[Number(i) - 1][1];
-                            temp.pop();
-                            break;
-                        }
-                    }                     
-                    break;
-                }
-            }
-        }
-    }
+    //     for (let i = 0; i < arr.length; i++){
+    //         if (arr[i][0].style.display == "block"){
+    //             arr[i][0].style.display = "none";
+    //             if (i == 0) {
+    //                 welcome.style.display = "block";
+    //                 break;
+    //             }
+    //             else {
+    //                 arr[i - 1][0].style.display = "block";
+    //                 for (let j = 0; j < temp.length; j++){
+    //                     if (temp[j] == i - 1){
+    //                         result -= arr[i - 1][1];
+    //                         temp.pop();
+    //                         break;
+    //                     }
+    //                 }                     
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
 
     else if (input == 'layerY' || input == 'layerT'){
-        var arr = [[layer1, 1], [layer2, 2], [layer3, 4], [layer4, 8],
+        let arr = [[layer1, 1], [layer2, 2], [layer3, 4], [layer4, 8],
         [layer5, 16], [layer6, 32], [layer7, 64]];
 
         for (let i in arr){
             if (arr[i][0].style.display == "block"){
                 if (input == 'layerY'){
                     result += arr[i][1];
-                    temp.push(Number(i));
+                    // temp.push(Number(i));
                 } 
                 if (Number(i) == arr.length - 1){
                     arr[i][0].style.display = "none";
@@ -87,7 +87,9 @@ function scr(input){
                         wrongResult.style.display = "block";
                     }
                     else {
-                        result1.style.display = "block";
+                        hasil.innerHTML = result;
+                        finish.style.display = "block";
+                        // result1.style.display = "block";
                     }
                     break;
                 }

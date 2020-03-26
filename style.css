@@ -88,10 +88,10 @@ body{
     display: none;
 }
 
-#result{
+/* #result{
     width: 100%;
     display: none;
-}
+} */
 
 #wrongResult{
     width: 100%;
@@ -153,23 +153,24 @@ body{
 .pilihNav{
     width: 90vw;
     margin-top: 3vw;
+    text-align: right;
 }
 
-.navBack{
+/* .navBack{
     background: rgb(135, 226, 162);
     color: rgb(0, 0, 0);
     border: 0;
     padding: 1vw 4vw;
     font-size: 2vw; 
     margin-right: 34%;
-}
+} */
 
-.navBack:hover{
+/* .navBack:hover{
     cursor: pointer;
     background: rgb(31, 199, 87);
     color: white;
     transition: 0.5s;
-}
+} */
 
 .navHome{
     background: rgb(135, 226, 162);
@@ -177,7 +178,7 @@ body{
     border: 0;
     padding: 1vw 4vw;
     font-size: 2vw; 
-    margin-left: 34%;
+    /* margin-left: 34%; */
 }
 
 .navHome:hover{
