@@ -2,7 +2,7 @@
 
 # ecommerce-cms
 
-## Creating ECommerce CMS Server
+### Creating ECommerce CMS Server
 ​
 List of available endpoints:
 ​
@@ -28,12 +28,11 @@ sequelize db:migrate
 sequelize db:seed:all
 ```
 
+
 ### POST /users/register
 
 Request:
-
 - data:
-
 ```json
 {
   "name": "string",	
@@ -43,11 +42,8 @@ Request:
 ```
 
 Response:
-
 - status: 201
 - body:
-  ​
-
 ```json
 {
     "id": 5,
@@ -60,11 +56,8 @@ Response:
 ```
 
 Error:
-
 - status: 400
 - body:
-  ​
-
 ```json
 if name is Empty
 {
@@ -79,12 +72,11 @@ if password is Empty
 ...
 ```
 
+
 ### POST /login
 
 Request:
-
 - data:
-
 ```json
 {
   "email": "string",
@@ -93,11 +85,8 @@ Request:
 ```
 
 Response:
-
 - status: 200
 - body:
-  ​
-
 ```json
 {
   "access_token": "string"
@@ -105,11 +94,8 @@ Response:
 ```
 
 Error:
-
 - status: 401
 - body:
-  ​
-
 ```json
 {
   "error_code": "LOGIN_FAILED",
