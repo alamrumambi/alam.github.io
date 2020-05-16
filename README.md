@@ -1,25 +1,34 @@
 # tebakangka
 
-# kanban-server
-Creating fancy kanban
+# ecommerce-cms
+
+Creating ECommerce CMS Server
 ​
 List of available endpoints:
 ​
 - `POST users/register`
 - `POST users/login`
-- `POST users/google-signin`
 
 List routes below need authentication
-- `GET /tasks/:category`
-- `POST /tasks`
+- `GET /products/`
+- `POST /products/`
+- `PUT /products/:id`
+- `DELETE /products/:id`
 
-And routes below need authentication and authorization
-- `GET /tasks/edit/:id`
-- `PUT /tasks/edit/:id`
-- `PUT /tasks/edit-category/:idCat`
-- `DELETE /tasks/:id`
+### Install All Package
 
-### POST /register
+```
+npm install
+```
+
+### Database Migrate
+
+```
+sequelize db:migrate
+sequelize db:seed:all
+```
+
+### POST /users/register
 
 Request:
 
@@ -27,7 +36,7 @@ Request:
 
 ```json
 {
-  "fullName": "string",	
+  "name": "string",	
   "email": "string",
   "password": "string"
 }
@@ -41,9 +50,12 @@ Response:
 
 ```json
 {
-  "id": "integer",
-  "fullName": "string",	
-  "email": "string",
+    "id": 5,
+    "name": "user2",
+    "email": "user2@email.com",
+    "password": "$2b$04$QD8H2vBrj.k7Wxqf0LtTjO/MzeOHaB8WIlxyXjBbrXmlMjn.FjCLS",
+    "updatedAt": "2020-05-16T20:41:39.406Z",
+    "createdAt": "2020-05-16T20:41:39.406Z"
 }
 ```
 
@@ -54,10 +66,12 @@ Error:
   ​
 
 ```json
+if name is Empty
 {
-  "error_code": "SAME_EMAIL",
-  "message": "Email has registered, please login!"
+    "error_code": "VALIDATION_ERROR",
+    "message": "Input username"
 }
+if password is Empty
 {
     "error_code": "VALIDATION_ERROR",
     "message": "Input password"
@@ -104,7 +118,7 @@ Error:
 ```
 
 
-### GET /tasks/:category
+### GET /products
 
 Request:
 
@@ -118,30 +132,24 @@ Response:
   ​
 
 ```json
-[
-     {
-        "id": 2,
-        "title": "making server kanban part 2",
-        "createDate": "2020-05-09",
-        "category": "backlog",
-        "UserId": 5,
-        "createdAt": "2020-05-08T17:25:08.225Z",
-        "updatedAt": "2020-05-08T17:25:08.225Z",
-        "User": {
-            "id": 5,
-            "fullName": "alam",
-            "email": "alam@email.com",
-            "password": "$2b$04$FMD2fvPR3lJhMhHKGoX5V.wmhQOzRiKzvARqfzJVO4TEQdFL6Biym",
-            "createdAt": "2020-05-08T17:15:18.979Z",
-            "updatedAt": "2020-05-08T17:15:18.979Z"
+{
+    "products": [
+        {
+            "id": 4,
+            "name": "shirt",
+            "image_url": "https://cdn-tp1.mozu.com/21830-33325/resources/images/no-product-image.png?_mzcb=_1589227234355",
+            "price": 120000,
+            "stock": 4,
+            "createdAt": "2020-05-16T20:48:46.187Z",
+            "updatedAt": "2020-05-16T20:48:46.187Z"
+        },{
+          ...
         }
-    },{
-      ...
-    }
-]
+    ]
+}
 ```
 
-### POST /tasks
+### POST /products
 Request:
 
 - headers: access_token
@@ -150,8 +158,10 @@ Request:
 
 ```json
 {
-  "title": "string",
-  "createDate": "dateonly"
+  "name": "string",
+  "image_url": "string",
+  "price": "integer",
+  "stock": "integer",
 }
 ```
 
@@ -163,146 +173,120 @@ Request:
 
 ```json
 {
-  "id": 4,
-  "title": "making client for kanban part 2",
-  "createDate": "2020-05-08",
-  "category": "backlog",
-  "UserId": 5,
-  "updatedAt": "2020-05-08T18:00:52.184Z",
-  "createdAt": "2020-05-08T18:00:52.184Z"
-}
-```
-​
-Error:
-
-- status: 400
-- body:
-  ​
-
-```json
-{
-  "error_code": "VALIDATION_ERROR",
-  "message": "Input task title"
-}
-```
-​
-
-### GET /tasks/edit/:id
-Request:
-
-- headers: access_token
-- params: 
-  - TaskId: integer (required)
-
-Response:
-
-- status: 200
-- body:
-
-```json
-[
-  {
-    "id": 2,
-    "title": "making server kanban part 2",
-    "createDate": "2020-05-09",
-    "category": "backlog",
-    "UserId": 5,
-    "createdAt": "2020-05-08T17:25:08.225Z",
-    "updatedAt": "2020-05-08T17:25:08.225Z"
-  }
-]
-```
-
-
-### PUT /tasks/edit/:id
-Request:
-
-- headers: access_token
-- params: 
-  - TaskId: integer (required)
-
-Response:
-
-- status: 200
-- body:
-
-```json
-[
-  {
-    "id": 2,
-    "title": "Edit set server",
-    "createDate": "2020-05-09",
-    "category": "backlog",
-    "UserId": 5,
-    "createdAt": "2020-05-08T17:25:08.225Z",
-    "updatedAt": "2020-05-08T18:35:29.357Z"
-  }
-]
-```
-
-Error:
-
-- status: 400
-- body:
-  ​
-
-```json
-{
-  "error_code": "VALIDATION_ERROR",
-  "message": "Input task title"
-}
-```
-​
-
-### PUT /tasks/edit-category/:id
-Request:
-
-- headers: access_token
-- params: 
-  - TaskId: integer (required)
-
-Response:
-
-- status: 200
-- body:
-
-```json
-[
-  {
-    "id": 2,
-    "title": "Edit set server",
-    "createDate": "2020-05-09",
-    "category": "to-do",
-    "UserId": 5,
-    "createdAt": "2020-05-08T17:25:08.225Z",
-    "updatedAt": "2020-05-08T18:39:40.651Z"
-  }
-]
-```
-
-
-### DELETE /tasks/:id
-Request:
-
-- headers: access_token
-- params: 
-  - TaskId: integer (required)
-
-Response:
-
-- status: 200
-- body:
-
-```json
-[
-  {
     "id": 4,
-    "title": "making client for kanban part 2",
-    "createDate": "2020-05-08",
-    "category": "backlog",
-    "UserId": 5,
-    "createdAt": "2020-05-08T18:00:52.184Z",
-    "updatedAt": "2020-05-08T18:00:52.184Z"
-  }
-]
+    "name": "shirt",
+    "image_url": "https://cdn-tp1.mozu.com/21830-33325/resources/images/no-product-image.png?_mzcb=_1589227234355",
+    "price": 120000,
+    "stock": 4,
+    "updatedAt": "2020-05-16T20:48:46.187Z",
+    "createdAt": "2020-05-16T20:48:46.187Z"
+}
+```
+​
+Error:
+
+- status: 400
+- body:
+  ​
+
+```json
+if name is Empty
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Input product's name"
+}
+if price less than 1
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Price can't less than 1"
+}
+if stock less than 1
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Stock can't less than 1"
+}
+```
+​
+
+### PUT /products/:id
+Request:
+
+- headers: access_token
+
+- params: 
+  - ProductId: integer (required)
+
+- data:
+
+```json
+{
+  "name": "string",
+  "image_url": "string",
+  "price": "integer",
+  "stock": "integer",
+}
+```
+
+Response:
+
+- status: 200
+- body:
+
+```json
+{
+    "message": "update success"
+}
+```
+
+Error:
+
+- status: 400
+- body:
+  ​
+```json
+if name is Empty
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Input product's name"
+}
+if price less than 1
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Price can't less than 1"
+}
+if stock less than 1
+{
+    "error_code": "VALIDATION_ERROR",
+    "message": "Stock can't less than 1"
+}
+```
+
+### DELETE /products/:id
+Request:
+
+- headers: access_token
+- params: 
+  - ProductId: integer (required)
+
+Response:
+
+- status: 200
+- body:
+
+```json
+{
+    "message": "delete success"
+}
+```
+
+Error:
+
+- status: 404
+- body:
+  ​
+```json
+{
+    "error_code": "DATA_NOT_FOUND",
+    "message": "Data not found"
+}
 ```
