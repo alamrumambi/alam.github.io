@@ -1,8 +1,6 @@
-# tebakangka
-
 # ecommerce-cms
 
-### Creating ECommerce CMS Server
+### Creating E-Commerce CMS Server
 ​
 List of available endpoints:
 ​
@@ -72,7 +70,6 @@ if password is Empty
 ...
 ```
 
-
 ### POST /login
 
 Request:
@@ -107,16 +104,12 @@ Error:
 ### GET /products
 
 Request:
-
 - headers:
   - access_token: string
 
 Response:
-
 - status: 200
 - body:
-  ​
-
 ```json
 {
     "products": [
@@ -135,13 +128,13 @@ Response:
 }
 ```
 
+
 ### POST /products
+
 Request:
-
-- headers: access_token
-
+- headers:
+  - access_token: string
 - data:
-
 ```json
 {
   "name": "string",
@@ -152,11 +145,8 @@ Request:
 ```
 
 ​Response:
-
 - status: 201
 - body:
-  ​
-
 ```json
 {
     "id": 4,
@@ -170,11 +160,8 @@ Request:
 ```
 ​
 Error:
-
 - status: 400
 - body:
-  ​
-
 ```json
 if name is Empty
 {
@@ -196,14 +183,11 @@ if stock less than 1
 
 ### PUT /products/:id
 Request:
-
-- headers: access_token
-
+- headers:
+  - access_token: string
 - params: 
   - ProductId: integer (required)
-
 - data:
-
 ```json
 {
   "name": "string",
@@ -214,10 +198,8 @@ Request:
 ```
 
 Response:
-
 - status: 200
 - body:
-
 ```json
 {
     "message": "update success"
@@ -225,10 +207,8 @@ Response:
 ```
 
 Error:
-
 - status: 400
 - body:
-  ​
 ```json
 if name is Empty
 {
@@ -247,18 +227,18 @@ if stock less than 1
 }
 ```
 
-### DELETE /products/:id
-Request:
 
-- headers: access_token
+### DELETE /products/:id
+
+Request:
+- headers:
+  - access_token: string
 - params: 
   - ProductId: integer (required)
 
 Response:
-
 - status: 200
 - body:
-
 ```json
 {
     "message": "delete success"
@@ -266,10 +246,8 @@ Response:
 ```
 
 Error:
-
 - status: 404
 - body:
-  ​
 ```json
 {
     "error_code": "DATA_NOT_FOUND",
